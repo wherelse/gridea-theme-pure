@@ -1,6 +1,6 @@
 {
   "name": "Pure",
-  "version": "1.0.6",
+  "version": "1.3.2",
   "author": "imhanjie",
   "repository": "https://github.com/imhanjie/gridea-theme-pure",
   "customConfig": [
@@ -250,6 +250,14 @@
       "note": "是否记录评论者IP"
     },
     {
+      "name": "visitor",
+      "label": "记录文章访问量",
+      "group": "valine评论系统",
+      "type": "switch",
+      "value": false,
+      "note": "是否记录文章访问量"
+    },
+    {
       "name": "placeholder",
       "label": "占位提示符",
       "group": "valine评论系统",
@@ -272,6 +280,36 @@
       "value": "",
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
+    },
+    {
+      "name": "friends",
+      "label": "友链",
+      "group": "友链",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "textarea", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "descfriend",
+      "label": "页面描述",
+      "group": "友链",
+      "type": "markdown",
+      "value": "",
+      "note": "友链页面的描述信息（Markdown 格式）"
+    },
+    {
+      "name": "about",
+      "label": "关于",
+      "group": "关于",
+      "type": "markdown",
+      "value": "",
+      "note": "关于页面的内容（Markdown 格式）"
     }
   ]
 }

@@ -50,7 +50,9 @@ const generateOverride = (params = {}) => {
     }
 
     console.log('current theme: ' + params.skin)
-
+    if (!params.skin) {
+        params.skin = 'black'
+    }
     result += `
         .gt-bg-theme-color-first {
           background: ${colors["theme-color-first"][params.skin]}!important;
@@ -139,6 +141,15 @@ const generateOverride = (params = {}) => {
         
         .gt-post-content code {
           background: ${colors["accent-color-second"][params.skin]}!important;
+        }
+        
+        input::placeholder {
+          color: ${colors["content-color-second"][params.skin]}!important;
+        }
+        
+        .search-input {
+          color: ${colors["content-color-first"][params.skin]}!important;
+          background-color: ${colors["theme-color-second"][params.skin]}!important;
         }
          `;
     if (params.customCss) {

@@ -1,4 +1,4 @@
-<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
 
 <style>
 	div#vcomments{
@@ -19,6 +19,7 @@
 		avatar: '<%=site.customConfig['avatar']%>',
 		pageSize: <%=site.customConfig['pageSize']%>,
 		recordIp: <%=site.customConfig['recordIp']%>,
-		placeholder: '<%=site.customConfig['placeholder']%>'
+		placeholder: '<%=site.customConfig['placeholder']%>',
+		visitor: <%=site.customConfig['visitor']%>,
 	});
 </script>
